@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+    <!-- Main Content -->
+    <style>
+      img {
+        width: 300px;
+      }
+      .welcome{
+        margin-top: 50px;
+        margin-bottom: 70px;
+      }
+      #postblock {position:relative; width:300px; right:100px; margin: 0 auto;}
+      #postblock .image,
+      #postblock .text {transition: 0.1s;}
+      #postblock .text {
+        position:absolute;
+        color:black;
+        top:50%;
+        left:30px;
+        opacity:0;
+        transform: translate(0, -50%);
+        width: 250px;
+      }
+      #postblock:hover .image {opacity:0;}
+      #postblock:hover .text {
+        opacity: 1;
+      }
+    </style>
+    <div class=" welcome">
+      <h2>Welcome the the Blog Archive</h2>
+    </div>
+        <div id="postblock">
+          <a href="post/1">
+            <img class="image" src="static/clyde.jpg">
+          <div class="text">
+            <div>
+              NBA Swag Lifetime Achievement Award
+            </div>
+            <p>Posted by D on 1/5/18</p>
+          </div>
+          </a>
+        </div>
+
+{% endblock %}
