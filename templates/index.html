@@ -1,6 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-    <!-- Main Content -->
+  <!-- Scripts for this Page -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(function() {
+      $( ".postblock" ).draggable();
+      $('.block').each(function(i,el){
+        $(el).css({"right": Math.random()*300});
+      });
+    });
+  </script>
+    <!-- Stlyes for this Page -->
     <style>
       img {
         width: 300px;
@@ -9,7 +20,7 @@
         margin-top: 50px;
         margin-bottom: 70px;
       }
-      #postblock {position:relative; width:300px; right:100px; margin: 0 auto;}
+      #postblock {position:relative; width:300px; margin: 0 auto;}
       #postblock .image,
       #postblock .text {transition: 0.1s;}
       #postblock .text {
@@ -26,7 +37,8 @@
         opacity: 1;
       }
     </style>
-        <div id="postblock">
+    <!-- Main Content -->
+        <div class="block" id="postblock">
           <a href="post/1">
             <img class="image" src="static/clyde.jpg">
           <div class="text">
@@ -37,7 +49,7 @@
           </div>
           </a>
         </div>
-        <div id="postblock">
+        <div class="block" id="postblock">
           <a href="post/2">
             <img class="image" src="static/elgin-baylor-triple-double.jpg">
           <div class="text">
