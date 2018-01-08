@@ -16,9 +16,12 @@
     <!-- <nav> -->
 <style>
     .topnav{
-      position: relative;
-      left: 500px;
-      top: 100px;
+      position: fixed;
+      right: 20%;
+      top: 50%;
+      overflow: scroll;
+      transform: rotate(270deg);
+
 
     }
     .topnav ul {
@@ -26,31 +29,27 @@
       list-style-type: none;
     }
     .topnav li {
-      margin-top: 15px;
+      margin-top: 5px;
       font-size: 20px;
       margin-right: 50px;
-      text-align: center;
+      text-align: left;
     }
     a, a:visited {
       text-decoration: none;
       color:black;
     }
-
+    footer {
+      margin-top: 30%;
+    }
 
 </style>
         <div class="topnav">
           <ul>
             <li>
-              <a href="{{ url_for('index') }}">Home</a>
+              <a href="{{ url_for('index') }}">HOOPSTOR</a>
             </li>
             <li>
-              <a href="{{ url_for('blogposts') }}">Archive</a>
-            </li>
-            <li>
-              <a href="{{ url_for('about') }}">About</a>
-            </li>
-            <li>
-              <a href="{{ url_for('contact') }}">Contact</a>
+              <a href="{{ url_for('info') }}">Info</a>
             </li>
           </ul>
         </div>

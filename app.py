@@ -14,9 +14,9 @@ def post(post_id):
     return render_template('post' + str(post_id) + '.html')
 
 
-@app.route('/about')
-def about():
-    return render_template('about.html')
+@app.route('/info')
+def info():
+    return render_template('info.html')
 
 
 @app.route('/contact')
