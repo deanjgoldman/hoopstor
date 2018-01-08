@@ -10,9 +10,27 @@
 
     <title>Dean Blog</title>
 
+    <script>
+      function startTime() {
+          var today = new Date();
+          var h = today.getHours();
+          var m = today.getMinutes();
+          var s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('txt').innerHTML =
+          h + ":" + m + ":" + s + " ET";
+          var t = setTimeout(startTime, 500);
+      }
+      function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+      }
+  </script>
+
   </head>
 
-  <body>
+  <body onload="startTime()">
     <!-- <nav> -->
 <style>
     .topnav{
@@ -51,6 +69,9 @@
             <li>
               <a href="{{ url_for('info') }}">Info</a>
             </li>
+            <li>
+              <div id="txt"></div>
+            </li>
           </ul>
         </div>
 
@@ -65,7 +86,7 @@
       <div class="container">
         <div class="row">
 
-            <p class="copyright text-muted">&copy; bball</p>
+            <p class="copyright text-muted">&copy; hoopstor</p>
 
         </div>
       </div>
