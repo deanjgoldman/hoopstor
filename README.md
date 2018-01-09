@@ -1,3 +1,3 @@
 # bball
 
-### In-progress blog covering topics in basketball.
+### Sleek and simple blog covering topics in basketball.
