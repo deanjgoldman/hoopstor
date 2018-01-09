@@ -14,7 +14,7 @@ db = SQLAlchemy(app)
 
 class Blogpost(db.Model):
     __tablename__ = "blogpost"
-    userid = db.Column(db.Integer, primary_key=True)
+    postid = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.Text)
     author = db.Column(db.Text)
     image = db.Column(db.Text)
