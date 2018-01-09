@@ -5,10 +5,13 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
     $(function() {
-      $( ".postblock" ).draggable();
       $('.block').each(function(i,el){
         $(el).css({"right": Math.random()*300});
       });
+      if ($(window).width() <= 700){
+        $('.topnav').html("<h4>HOOPSTOR</h4>");
+        $('footer').html("");
+      }
     });
   </script>
     <!-- Stlyes for this Page -->
@@ -36,8 +39,20 @@
       #postblock:hover .text {
         opacity: 1;
       }
+      @media screen and (max-width: 699px) {
+        ul li div {
+          right: 35% !important;
+          flex-grow: 100;
+        }
+        div.topnav{
+          left: 70% !important;
+        }
+      }
     </style>
     <!-- Main Content -->
+    <main>
+    <ul style="list-style: none;">
+      <li>
         <div class="block" id="postblock">
           <a href="post/1">
             <img class="image" src="static/clyde.jpg">
@@ -49,6 +64,8 @@
           </div>
           </a>
         </div>
+      </li>
+      <li>
         <div class="block" id="postblock">
           <a href="post/2">
             <img class="image" src="static/elgin-baylor-triple-double.jpg">
@@ -60,5 +77,7 @@
           </div>
           </a>
         </div>
-
+      </li>
+    </ul>
+  </main>
 {% endblock %}
