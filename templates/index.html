@@ -1,67 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
-  <!-- Scripts for this Page -->
 
-    <!-- Stlyes for this Page -->
-    <style>
-      img {
-        width: 300px;
-      }
-      .welcome{
-        margin-top: 50px;
-        margin-bottom: 70px;
-      }
-      #postblock {position:relative; width:300px; margin: 0 auto;}
-      #postblock .image,
-      #postblock .text {transition: 0.1s;}
-      #postblock .text {
-        position:absolute;
-        color:black;
-        top:50%;
-        left:30px;
-        opacity:0;
-        transform: translate(0, -50%);
-        width: 250px;
-      }
-      #postblock:hover .image {opacity:0;}
-      #postblock:hover .text {
-        opacity: 1;
-      }
-      @media screen and (max-width: 699px) {
-        ul li div {
-          right: 30% !important;
-        }
-      }
-    </style>
     <!-- Main Content -->
     <main>
     <ul style="list-style: none;">
+      {% for post in context %}
       <li>
         <div class="block" id="postblock">
           <a href="post/1">
-            <img class="image" src="static/clyde.jpg">
+            <img class="image" src="{{ post.image }}">
           <div class="text">
             <div>
-              NBA Swag Lifetime Achievement Award
+              {{ post.title }}
             </div>
-            <p>Posted by D on 1/5/18</p>
+            <p> {{ post.author }}</p>
           </div>
           </a>
         </div>
       </li>
-      <li>
-        <div class="block" id="postblock">
-          <a href="post/2">
-            <img class="image" src="static/elgin-baylor-triple-double.jpg">
-          <div class="text">
-            <div>
-              How You Can Run Up a 52/25/10 Night While Looking Like You're Still Learning How to Dribble
-            </div>
-            <p>Posted by D on 1/7/18</p>
-          </div>
-          </a>
-        </div>
-      </li>
+      {% endfor %}
     </ul>
   </main>
 {% endblock %}

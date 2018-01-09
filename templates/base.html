@@ -11,6 +11,7 @@
     <title>HOOPSTOR</title>
  <!-- Scripts for Base.html -->
     <script>
+    // Home Page Clock
       function startTime() {
           var today = new Date();
           var h = today.getHours();
@@ -23,13 +24,14 @@
           var t = setTimeout(startTime, 500);
       }
       function checkTime(i) {
-          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          if (i < 10) {i = "0" + i};
           return i;
       }
   </script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
+  // Stagger Home Page Blog Images
     $(function() {
       $('.block').each(function(i,el){
         $(el).css({"right": Math.random()*300});
@@ -39,7 +41,6 @@
   </head>
 
   <body onload="startTime()">
-    <!-- <nav> -->
 <style>
     .topnav{
       position: fixed;
@@ -77,10 +78,39 @@
       }
       .topnav ul li {
       font-size: 80%;
+      }
     }
+    img {
+      width: 300px;
+    }
+    .welcome{
+      margin-top: 50px;
+      margin-bottom: 70px;
+    }
+    #postblock {position:relative; width:300px; margin: 0 auto;}
+    #postblock .image,
+    #postblock .text {transition: 0.1s;}
+    #postblock .text {
+      position:absolute;
+      color:black;
+      top:50%;
+      left:30px;
+      opacity:0;
+      transform: translate(0, -50%);
+      width: 250px;
+    }
+    #postblock:hover .image {opacity:0;}
+    #postblock:hover .text {
+      opacity: 1;
+    }
+    @media screen and (max-width: 699px) {
+      ul li div {
+        right: 30% !important;
+      }
     }
 
 </style>
+    <!-- Nav -->
         <div class="topnav">
           <ul>
             <li>
