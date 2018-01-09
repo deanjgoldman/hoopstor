@@ -1,19 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
   <!-- Scripts for this Page -->
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-    $(function() {
-      $('.block').each(function(i,el){
-        $(el).css({"right": Math.random()*300});
-      });
-      if ($(window).width() <= 700){
-        $('.topnav').html("<h4>HOOPSTOR</h4>");
-        $('footer').html("");
-      }
-    });
-  </script>
+
     <!-- Stlyes for this Page -->
     <style>
       img {
@@ -41,7 +29,7 @@
       }
       @media screen and (max-width: 699px) {
         ul li div {
-          right: 35% !important;
+          right: 30% !important;
           flex-grow: 100;
         }
       }
