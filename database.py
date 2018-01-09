@@ -5,6 +5,8 @@ from os import listdir
 
 
 def main():
+    db.drop_all()
+    db.create_all()
     files = listdir(app.template_folder)
     for html in files:
         if re.search('post', html):
