@@ -34,10 +34,6 @@
       $('.block').each(function(i,el){
         $(el).css({"right": Math.random()*300});
       });
-      if ($(window).width() <= 700){
-        $('.topnav').html("<a href='/'><h4>HOOPSTOR</h4></a>").css({"right":"0;", "transform":"translateX(-100%);"});
-        $('footer').html("");
-      }
     });
   </script>
   </head>
@@ -70,9 +66,18 @@
       margin-top: 30%;
     }
     @media screen and (max-width: 699px) {
+
       main .postblock {
-        width: 265px;
+        width: 80%;
       }
+      .topnav {
+        width: 60%;
+        right: 0px;
+        z-index: 1000;
+      }
+      .topnav ul li {
+      font-size: 80%;
+    }
     }
 
 </style>
@@ -80,9 +85,6 @@
           <ul>
             <li>
               <a href="{{ url_for('index') }}">HOOPSTOR</a>
-            </li>
-            <li>
-              <a href="{{ url_for('info') }}">Info</a>
             </li>
             <li>
               <div id="txt"></div>
