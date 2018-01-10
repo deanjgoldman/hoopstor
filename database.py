@@ -5,7 +5,7 @@ from os import listdir
 
 
 def main():
-    ids = [str(post.userid) for post in app.Blogpost.query.all()]
+    ids = [str(post.userid) for post in Blogpost.query.all()]
     files = listdir(app.template_folder)
     for html in files:
         if re.search('post', html):
