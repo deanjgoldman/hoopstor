@@ -2,4 +2,4 @@
 
 ### Sleek and simple blog covering topics in basketball.
 ----------------------------------------
-hoopstor.herokuapp.com
+https://wwww.hoopstor.herokuapp.com
