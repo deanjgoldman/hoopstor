@@ -1,6 +1,5 @@
-# bball
-
-### Sleek and simple blog covering topics in basketball.
+# hoopstor
+A simple blog for sharing basketball content
 ----------------------------------------
 https://www.hoopstor.herokuapp.com
 
