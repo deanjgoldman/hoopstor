@@ -2,7 +2,7 @@
 
 ### Sleek and simple blog covering topics in basketball.
 ----------------------------------------
-https://wwww.hoopstor.herokuapp.com
+https://www.hoopstor.herokuapp.com
 
 ## Adding posts:
 1. Create a post file, title it post< Next sequential # >.html
